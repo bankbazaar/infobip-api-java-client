@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.infobip</groupId>
+    <groupId>com.bankbazaar</groupId>
     <artifactId>infobip-api-java-client</artifactId>
-    <version>2.2.0-SNAPSHOT</version>
-    <name>Infobip API Java Client</name>
+    <version>1.0.0</version>
+    <name>Infobip API Java Client - Custom BB Impl</name>
     <description>
-        API client in Java for Infobip's API (http://dev.infobip.com/).
+        API client in Java for Infobip's API (http://dev.infobip.com/) Custom BB Impl.
     </description>
     <url>http://dev.infobip.com/v1/page/downloads#libraries</url>
 
@@ -37,31 +37,30 @@
         </developer>
     </developers>
 
+    <repositories>
+        <repository>
+            <id>snapshots</id>
+            <name>Snapshots Repository</name>
+            <url>http://mvnrepository.bankbazaar.com/repository/snapshots/</url>
+        </repository>
+        <repository>
+            <id>internal</id>
+            <name>Internal Repository</name>
+            <url>http://mvnrepository.bankbazaar.com/repository/internal/</url>
+        </repository>
+        <repository>
+            <id>mvn-public</id>
+            <name>MVNRepository</name>
+            <url>http://mvnrepository.com</url>
+        </repository>
+    </repositories>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
         <BUILD_NUMBER>1</BUILD_NUMBER>
         <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
     </properties>
-
-    <distributionManagement>
-        <repository>
-            <id>ossrh-releases</id>
-            <name>SonatypeReleases</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-        </repository>
-        <snapshotRepository>
-            <id>ossrh-snapshots</id>
-            <name>SonatypeSnapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-
-    <scm>
-        <url>https://github.com/infobip/infobip-api-java-client.git</url>
-        <connection>scm:git:git://github.com/infobip/infobip-api-java-client.git</connection>
-        <developerConnection>scm:git:git@github.com:infobip/infobip-api-java-client.git</developerConnection>
-    </scm>
 
     <build>
         <plugins>

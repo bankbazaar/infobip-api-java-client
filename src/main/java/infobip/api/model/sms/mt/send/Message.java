@@ -7,6 +7,7 @@ import infobip.api.model.sms.mt.send.binary.BinaryContent;
 import infobip.api.model.sms.mt.send.Language;
 import java.util.Date;
 import infobip.api.model.sms.mt.send.DeliveryTimeWindow;
+import java.util.Objects;
 
 /**
  * This is a generated class and is not intended for modification!
@@ -30,6 +31,8 @@ public class Message {
     private DeliveryTimeWindow deliveryTimeWindow;
     private String campaignId;
     private String operatorClientId;
+    private String indiaDltContentTemplateId;
+    private String indiaDltPrincipalEntityId;
 
     public Message() {
     }
@@ -196,167 +199,86 @@ public class Message {
         return this;
     }
 
+    public String getIndiaDltContentTemplateId() {
+        return indiaDltContentTemplateId;
+    }
+
+    public void setIndiaDltContentTemplateId(String indiaDltContentTemplateId) {
+        this.indiaDltContentTemplateId = indiaDltContentTemplateId;
+    }
+
+    public String getIndiaDltPrincipalEntityId() {
+        return indiaDltPrincipalEntityId;
+    }
+
+    public void setIndiaDltPrincipalEntityId(String indiaDltPrincipalEntityId) {
+        this.indiaDltPrincipalEntityId = indiaDltPrincipalEntityId;
+    }
+
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
+        Message message = (Message) o;
+        return Objects.equals(from, message.from) &&
+            Objects.equals(to, message.to) &&
+            Objects.equals(destinations, message.destinations) &&
+            Objects.equals(text, message.text) &&
+            Objects.equals(binary, message.binary) &&
+            Objects.equals(flash, message.flash) &&
+            Objects.equals(language, message.language) &&
+            Objects.equals(transliteration, message.transliteration) &&
+            Objects.equals(notify, message.notify) &&
+            Objects.equals(intermediateReport, message.intermediateReport) &&
+            Objects.equals(notifyUrl, message.notifyUrl) &&
+            Objects.equals(notifyContentType, message.notifyContentType) &&
+            Objects.equals(callbackData, message.callbackData) &&
+            Objects.equals(validityPeriod, message.validityPeriod) &&
+            Objects.equals(sendAt, message.sendAt) &&
+            Objects.equals(deliveryTimeWindow, message.deliveryTimeWindow) &&
+            Objects.equals(campaignId, message.campaignId) &&
+            Objects.equals(operatorClientId, message.operatorClientId) &&
+            Objects.equals(indiaDltContentTemplateId, message.indiaDltContentTemplateId) &&
+            Objects.equals(indiaDltPrincipalEntityId, message.indiaDltPrincipalEntityId);
+    }
 
-        Message o = (Message)obj;
-        if (this.from == null) {
-            if (o.from != null){
-                return false;
-            }
-        } else if (!this.from.equals(o.from)) {
-            return false;
-        }
-        if (this.to == null) {
-            if (o.to != null){
-                return false;
-            }
-        } else if (!this.to.equals(o.to)) {
-            return false;
-        }
-        if (this.destinations == null) {
-            if (o.destinations != null){
-                return false;
-            }
-        } else if (!this.destinations.equals(o.destinations)) {
-            return false;
-        }
-        if (this.text == null) {
-            if (o.text != null){
-                return false;
-            }
-        } else if (!this.text.equals(o.text)) {
-            return false;
-        }
-        if (this.binary == null) {
-            if (o.binary != null){
-                return false;
-            }
-        } else if (!this.binary.equals(o.binary)) {
-            return false;
-        }
-        if (this.flash == null) {
-            if (o.flash != null){
-                return false;
-            }
-        } else if (!this.flash.equals(o.flash)) {
-            return false;
-        }
-        if (this.language == null) {
-            if (o.language != null){
-                return false;
-            }
-        } else if (!this.language.equals(o.language)) {
-            return false;
-        }
-        if (this.transliteration == null) {
-            if (o.transliteration != null){
-                return false;
-            }
-        } else if (!this.transliteration.equals(o.transliteration)) {
-            return false;
-        }
-        if (this.notify == null) {
-            if (o.notify != null){
-                return false;
-            }
-        } else if (!this.notify.equals(o.notify)) {
-            return false;
-        }
-        if (this.intermediateReport == null) {
-            if (o.intermediateReport != null){
-                return false;
-            }
-        } else if (!this.intermediateReport.equals(o.intermediateReport)) {
-            return false;
-        }
-        if (this.notifyUrl == null) {
-            if (o.notifyUrl != null){
-                return false;
-            }
-        } else if (!this.notifyUrl.equals(o.notifyUrl)) {
-            return false;
-        }
-        if (this.notifyContentType == null) {
-            if (o.notifyContentType != null){
-                return false;
-            }
-        } else if (!this.notifyContentType.equals(o.notifyContentType)) {
-            return false;
-        }
-        if (this.callbackData == null) {
-            if (o.callbackData != null){
-                return false;
-            }
-        } else if (!this.callbackData.equals(o.callbackData)) {
-            return false;
-        }
-        if (this.validityPeriod == null) {
-            if (o.validityPeriod != null){
-                return false;
-            }
-        } else if (!this.validityPeriod.equals(o.validityPeriod)) {
-            return false;
-        }
-        if (this.sendAt == null) {
-            if (o.sendAt != null){
-                return false;
-            }
-        } else if (!this.sendAt.equals(o.sendAt)) {
-            return false;
-        }
-        if (this.deliveryTimeWindow == null) {
-            if (o.deliveryTimeWindow != null){
-                return false;
-            }
-        } else if (!this.deliveryTimeWindow.equals(o.deliveryTimeWindow)) {
-            return false;
-        }
-        if (this.campaignId == null) {
-            if (o.campaignId != null){
-                return false;
-            }
-        } else if (!this.campaignId.equals(o.campaignId)) {
-            return false;
-        }
-        if (this.operatorClientId == null) {
-            if (o.operatorClientId != null){
-                return false;
-            }
-        } else if (!this.operatorClientId.equals(o.operatorClientId)) {
-            return false;
-        }
-
-        return true;
+    @Override
+    public int hashCode() {
+        return Objects
+            .hash(from, to, destinations, text, binary, flash, language, transliteration, notify,
+                intermediateReport, notifyUrl, notifyContentType, callbackData, validityPeriod,
+                sendAt,
+                deliveryTimeWindow, campaignId, operatorClientId, indiaDltContentTemplateId,
+                indiaDltPrincipalEntityId);
     }
 
     @Override
     public String toString() {
         return "Message{" +
-            "from='" + from + "'" +
-            ", to='" + to + "'" +
-            ", destinations='" + destinations + "'" +
-            ", text='" + text + "'" +
-            ", binary='" + binary + "'" +
-            ", flash='" + flash + "'" +
-            ", language='" + language + "'" +
-            ", transliteration='" + transliteration + "'" +
-            ", notify='" + notify + "'" +
-            ", intermediateReport='" + intermediateReport + "'" +
-            ", notifyUrl='" + notifyUrl + "'" +
-            ", notifyContentType='" + notifyContentType + "'" +
-            ", callbackData='" + callbackData + "'" +
-            ", validityPeriod='" + validityPeriod + "'" +
-            ", sendAt='" + sendAt + "'" +
-            ", deliveryTimeWindow='" + deliveryTimeWindow + "'" +
-            ", campaignId='" + campaignId + "'" +
-            ", operatorClientId='" + operatorClientId + "'" +
+            "from='" + from + '\'' +
+            ", to=" + to +
+            ", destinations=" + destinations +
+            ", text='" + text + '\'' +
+            ", binary=" + binary +
+            ", flash=" + flash +
+            ", language=" + language +
+            ", transliteration='" + transliteration + '\'' +
+            ", notify=" + notify +
+            ", intermediateReport=" + intermediateReport +
+            ", notifyUrl='" + notifyUrl + '\'' +
+            ", notifyContentType='" + notifyContentType + '\'' +
+            ", callbackData='" + callbackData + '\'' +
+            ", validityPeriod=" + validityPeriod +
+            ", sendAt=" + sendAt +
+            ", deliveryTimeWindow=" + deliveryTimeWindow +
+            ", campaignId='" + campaignId + '\'' +
+            ", operatorClientId='" + operatorClientId + '\'' +
+            ", indiaDltContentTemplateId='" + indiaDltContentTemplateId + '\'' +
+            ", indiaDltPrincipalEntityId='" + indiaDltPrincipalEntityId + '\'' +
             '}';
     }
 }
