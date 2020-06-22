@@ -2,6 +2,7 @@ package infobip.api.model.sms.mt.send;
 
 import infobip.api.model.sms.mt.send.SMSResponseDetails;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -13,6 +14,16 @@ public class SMSResponse {
     private List<SMSResponseDetails> messages = new ArrayList<>();
 
     public SMSResponse() {
+    }
+
+    public SMSResponse addMessages(SMSResponseDetails... messages) {
+        this.messages.addAll(Arrays.asList(messages));
+        return this;
+    }
+
+    public SMSResponse removeMessages(SMSResponseDetails... messages) {
+        this.messages.removeAll(Arrays.asList(messages));
+        return this;
     }
 
     public String getBulkId() {

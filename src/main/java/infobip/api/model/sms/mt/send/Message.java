@@ -1,6 +1,7 @@
 package infobip.api.model.sms.mt.send;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import infobip.api.model.Destination;
 import infobip.api.model.sms.mt.send.binary.BinaryContent;
@@ -35,6 +36,16 @@ public class Message {
     private String indiaDltPrincipalEntityId;
 
     public Message() {
+    }
+
+    public Message addDestinations(Destination... destinations) {
+        this.destinations.addAll(Arrays.asList(destinations));
+        return this;
+    }
+
+    public Message removeDestinations(Destination... destinations) {
+        this.destinations.removeAll(Arrays.asList(destinations));
+        return this;
     }
 
     public String getFrom() {
