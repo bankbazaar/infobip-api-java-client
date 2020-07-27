@@ -32,8 +32,7 @@ public class Message {
     private DeliveryTimeWindow deliveryTimeWindow;
     private String campaignId;
     private String operatorClientId;
-    private String indiaDltContentTemplateId;
-    private String indiaDltPrincipalEntityId;
+    private Regional regional;
 
     public Message() {
     }
@@ -210,20 +209,12 @@ public class Message {
         return this;
     }
 
-    public String getIndiaDltContentTemplateId() {
-        return indiaDltContentTemplateId;
+    public Regional getRegional() {
+        return regional;
     }
 
-    public void setIndiaDltContentTemplateId(String indiaDltContentTemplateId) {
-        this.indiaDltContentTemplateId = indiaDltContentTemplateId;
-    }
-
-    public String getIndiaDltPrincipalEntityId() {
-        return indiaDltPrincipalEntityId;
-    }
-
-    public void setIndiaDltPrincipalEntityId(String indiaDltPrincipalEntityId) {
-        this.indiaDltPrincipalEntityId = indiaDltPrincipalEntityId;
+    public void setRegional(Regional regional) {
+        this.regional = regional;
     }
 
     @Override
@@ -253,8 +244,7 @@ public class Message {
             Objects.equals(deliveryTimeWindow, message.deliveryTimeWindow) &&
             Objects.equals(campaignId, message.campaignId) &&
             Objects.equals(operatorClientId, message.operatorClientId) &&
-            Objects.equals(indiaDltContentTemplateId, message.indiaDltContentTemplateId) &&
-            Objects.equals(indiaDltPrincipalEntityId, message.indiaDltPrincipalEntityId);
+            Objects.equals(regional, message.regional);
     }
 
     @Override
@@ -263,8 +253,7 @@ public class Message {
             .hash(from, to, destinations, text, binary, flash, language, transliteration, notify,
                 intermediateReport, notifyUrl, notifyContentType, callbackData, validityPeriod,
                 sendAt,
-                deliveryTimeWindow, campaignId, operatorClientId, indiaDltContentTemplateId,
-                indiaDltPrincipalEntityId);
+                deliveryTimeWindow, campaignId, operatorClientId, regional);
     }
 
     @Override
@@ -288,8 +277,7 @@ public class Message {
             ", deliveryTimeWindow=" + deliveryTimeWindow +
             ", campaignId='" + campaignId + '\'' +
             ", operatorClientId='" + operatorClientId + '\'' +
-            ", indiaDltContentTemplateId='" + indiaDltContentTemplateId + '\'' +
-            ", indiaDltPrincipalEntityId='" + indiaDltPrincipalEntityId + '\'' +
+            ", regional=" + regional +
             '}';
     }
 }
